@@ -89,19 +89,17 @@ h4{
 
 /*Barra de navegación*/
 
-.barraylogo{
-    background-color: rgb(250, 194, 226);
-    padding: 10px;
-}
-
-.barra{
-    height: auto;
-    width: 100%;
-    font-size: 1rem;
+.nav-item{
+    font-size: 1.2rem;
+    color: rgb(80, 18, 52);
     font-family: 'Quicksand', sans-serif;
     text-align: center;   
-    text-shadow: 1px 1px 2px rgb(80, 18, 52);
+    text-shadow: 1px 1px 2px rgb(250, 194, 226);
     font-weight: bold;
+}
+
+.navbar button:hover{
+    background-color: rgb(196, 67, 140);
 }
 
 /*esto es para que la barra de la pagina index se mueva, por el momento lo deshabilite porque no me convence
@@ -365,25 +363,42 @@ h4{
 
 /*menu desplegable de la secciòn "productos"*/
 
-
-ul{
+.dropdown{
+    background-color: rgb(255, 189, 240);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     list-style: none;
-    background-color: pink;
-    font-size: 0;
+}
+
+.btn{
+    background-color: rgb(255, 189, 240);
+    border: 1px solid rgb(255, 189, 240);
+    color: rgb(119, 21, 75);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    list-style: none;
+
+}
+
+.dropdown li{
+    color: rgb(196, 67, 140);
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    background-color: rgb(255, 189, 240);
+}
+
+.dropdown li a{
+    list-style: none;
+    text-decoration: none;
+    color: rgb(80, 18, 52);
+    font-weight: bold;
+    font-size: 1rem;
     text-align: center;
 }
 
-li {
-    display: inline;
-    width: 25%;
-    position: relative;
-    font-size: 40px;
-    margin: 15px;
-}
 
-li a{
-    text-decoration: none;
-}
 
 li a:hover{
     color: rgb(242, 12, 154);
@@ -391,34 +406,27 @@ li a:hover{
 
 
 
-/* Esta parte no se ve reflejada en la pagina cuando la cargo, no se porque, revise varias veces el video de la clase y no encontre el error*/
-
-ul ul {
-    position: absolute;
-    display: none;
-}
-
-ul ul li {
-    display: block;
-}
-
-ul li:hover ul{
-    display: block;
-}
-
-
-li{
-    color: rgb(80, 18, 52);
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
 /*Galeria de la sección productos*/
+
+.thumbnail{
+    padding: 12px;
+    text-align: center;
+}
+
+.thumbnail a{
+    text-decoration: none;
+    color: rgb(241, 154, 203);
+}
+
+.thumbnail .btn{
+    text-decoration: none;
+    color: rgb(119, 21, 75);
+}
 
 .galeriaproductos{
     width: 100%;
     height: auto;
-    background-color: rgb(80, 18, 52);
+    background-color: rgb(245, 243, 230);
     padding: 20px;
     min-height: 100vh;
 }
@@ -437,7 +445,7 @@ li{
 }
 
 .imagen1{
-    background-image: url(Imagenes/19.jpg);
+    background-image: url(imagenes/19.jpg);
     background-size: cover;
     background-position: center;
     
@@ -602,6 +610,7 @@ li{
 
 /*responsive*/
 
+
 @media only screen and (min-width:400px){
     .galeriadeoportunidades{
         display: grid;
@@ -611,6 +620,7 @@ li{
         display: grid;
         grid-template-columns: 1fr;
     }
+    /*
     .portada2{
         background-image: url(./Imagenes/portada3.jpg);
         width: 100%;
@@ -618,6 +628,7 @@ li{
         background-size: cover;
         background-position: center;
     }
+    */
     .galeriaproductos{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -652,6 +663,7 @@ li{
         grid-column: 2/4;
         grid-row: 4/5;
     }
+    /*
     .portada2{
         background-image: url(./Imagenes/portada3.jpg);
         width: 100%;
@@ -659,6 +671,7 @@ li{
         background-size: cover;
         background-position: center;
     }
+    */
     .whatsapp{
         width: 50px;
         position: fixed;
@@ -694,14 +707,15 @@ li{
     .galeriadeoportunidades{
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+    /*
     .portada2{
-        background-image: url(./Imagenes/portada.jpg);
         width: 100%;
         height: 877px;
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
     }
+    */
     .whatsapp{
         width: 55px;
         position: fixed;
