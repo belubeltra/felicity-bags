@@ -13,6 +13,7 @@
 <body>
     <header>
         <section>
+            
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -46,60 +47,112 @@
                     <button class="btn btn-outline my-2 my-sm-0" type="submit">Buscar</button>
                   </form>
                 </div>
+             <a href="productos.html"><i class="fa-solid fa-cart-shopping"></i></i></a>
+             <a href="contacto.html"><i class="fa-solid fa-user"></i></a>
               </nav>
             </section>      
     </header>
     
 <main>
     <h5>Felicity Bags - Carteras y Accesorios </h5>
-    <section class="formularioprueba">
-        <form action="" method="post" enctype="multipart/form">
-            <fieldset>
-                <legend id="datospersonales">Datos personales</legend>
-                <div>
-                    <label for=>Ingrese su nombre</label>
-                    <input type="text" placeholder="Nombre">
-                    <label for="">Ingrese su apellido</label>
-                    <input type="text" placeholder="Apellido">
-                </div>
-                <br>
-                <div>
-                    <label for="sexo">Selecciones su sexo</label>
-                    <select name="" id="">
-                        <option value="F">Femenino</option>
-                        <option value="M">Masculino</option>
-                        <option value="N">No responde</option>
-                    </select>
-                </div>
-                <br>
-                <div>
-                    <label for=>Ingrese su mail</label>
-                    <input type="text" placeholder="Mail">
-                    <label for=>Ingrese su contraseña</label>
-                    <input type="text" placeholder="contraseña">
-                </div>
-                <br>
-                <div>
-                    <label for="">Acepto terminos y condiciones</label>
-                    <input type="checkbox" value="1" name="acepta" id="">
-                </div>
-                <br>              
-                <div class="novedades">
-                    <label for="novedades">¿Desea recibir novedades por mail?</label>
-                    <label for="">Si</label>
-                    <input type="radio" name="novedades" id="">
-                    <label for="">No</label>
-                    <input type="radio" name="novedades" id="">No
-                </div>
-                <br>  
-                <div>
-                    <input type="submit" value="Registrarse">
-                    <input type="reset" value="Limpiar">
-                </div>
-
-            </fieldset>
-        </form>
-    </section>
+    <h2>Registrate en nuestra web y recibi todas las novedades</h2>
+    <form class="formulario">
+        <div class="form-row">
+          <div class="form-group col-md-8">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" id="Ingrese su email" placeholder="Ingrese su email">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputPassword4">Contraseña</label>
+            <input type="password" class="form-control" id="Ingrese contraseña" placeholder="Ingrese su contraseña">
+          </div>
+        </div>
+    
+         <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Nombre</label>
+            <input type="email" class="form-control" id="Ingrese su Nombre" placeholder="Ingrese su Nombre">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">Apellido</label>
+            <input type="password" class="form-control" id="Ingrese su apellido" placeholder="Ingrese su Nombre">
+          </div>
+        </div>
+        <div class="form-row">
+        <div class="form-group col-md-8">
+          <label for="inputAddress">Dirección</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="Nombre de la calle">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputAddress2">Numero</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="Altura/Número">
+        </div>
+      </div>
+        <div class="form-row">
+          <div class="form-group col-md-5">
+            <label for="inputCity">Ciudad</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputState">Provincia</label>
+            <select id="inputState" class="form-control">
+              <option selected>Seleccionar</option>
+              <option>Buenos Aires</option>
+              <option>Ciudad Autonoma de Buenos Aires</option>
+              <option>Catamarca</option>
+              <option>Chaco</option>
+              <option>Chubut</option>
+              <option>Cordoba</option>
+              <option>Corrientes</option>
+              <option>Entre Rios</option>
+              <option>Formosa</option>
+              <option>Jujuy</option>
+              <option>La Pampa</option>
+              <option>La rioja</option>
+              <option>Mendoza</option>
+              <option>Misiones</option>
+              <option>Neuquen</option>
+              <option>Rio Negro</option>
+              <option>Salta</option>
+              <option>San Luis</option>
+              <option>San Juan</option>
+              <option>Santa Cruz</option>
+              <option>Santa Fe</option>
+              <option>Santiago del Estero</option>
+              <option>Tierra del fuego</option>
+              <option>Tucuman</option>
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputCity">Pais</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputZip">Codigo Postal</label>
+            <input type="text" class="form-control" id="inputZip">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              Acepto los términos y condiciones
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label class="form-check-label" for="gridCheck">
+                Recibir novedades por mail
+              </label>
+            </div>
+          </div>
+        <div class="botonregistrar">
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </div>
+        
+      </form>
 
     <div>
         <img class="whatsapp" src="./Imagenes/11 whatsapp.webp" alt="Logo de whatsapp">

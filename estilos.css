@@ -11,6 +11,7 @@ font-family: 'Roboto Condensed', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
         
     
     /*ojo si quiero cambiar una fuente y poner otra distinta, borrar esta de aca, sino no me toma la cascada */
@@ -62,8 +63,9 @@ h2{
     animation-delay: 5s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
-
 }
+
+
 
   @keyframes aparecer{
     0%{
@@ -98,9 +100,71 @@ h4{
     font-weight: bold;
 }
 
+.fa-solid{
+    color: rgb(119, 21, 75);
+    padding: 12px;
+    font-size: 1.5rem;
+}
+
+
 .navbar button:hover{
     background-color: rgb(196, 67, 140);
 }
+
+/*Mapa de la sección Index*/
+.map{
+    background-color: rgb(245, 243, 230);
+    padding: 15px;
+}
+
+.mrigth h3{
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 25px;
+    font-size: 2rem;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.mrigth h4{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+.mrigth a{
+    font-size: 2rem;
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: rgb(80, 18, 52);
+}
+
+.mrigth i{
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    animation-duration: 2s;
+    animation-name: whatsapp;
+    animation-delay: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes whatsapp{
+    0%{
+        color: rgb(119, 21, 75);
+    }
+
+    100%{
+        color: rgb(222, 47, 184);
+    }
+  }
+
+
 
 /*esto es para que la barra de la pagina index se mueva, por el momento lo deshabilite porque no me convence
 .barra--index{
@@ -108,7 +172,7 @@ h4{
 }
 */
 
-.barra :hover{
+.barra:hover{
     color: rgb(242, 12, 154);
 }
 
@@ -154,38 +218,33 @@ h4{
     animation-delay: 4s;
 }
 
+/*
 @keyframes modatexto{
     0%{
         left: 0;
         top: 0;
     }
     25%{
-        left: 200px;
+        left: 100px;
         top: 0;
     }
 
     50%{
-        left: 250 px;
+        left: 150 px;
         top: 0;
     }
     75%{
-        left: 300px;
+        left: 200px;
         top: 0;
     }
     100%{
-        left: 320;
+        left: 220;
         top: 0;
 
     }
 }
-
-/* esto esta de mas pero lo dejo por las dudas de que luego lo necesite,si no lo uso mas adelante lo borro
-.portada img{
-    height: 888px;
-    top: 80px;
-    position: sticky;
-}
 */
+
 
 .textoprincipal h2{
     font-size: 3.5rem;
@@ -234,15 +293,23 @@ h4{
 
 /*Contacto*/
 
-.formularioprueba{
-    background-color: rgb(241, 154, 203);
+.formulario{
+    width: 99%;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+    padding: 15px;
+    margin: 7px;
 }
 
-#datospersonales{
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 1.5rem;
+
+
+
+.botonregistrar{
+    align-items: center;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .novedades{
@@ -338,26 +405,80 @@ h4{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.oportunidadesparaaprovechar{
-    font-size: 5rem;
-    animation-name: oportunidades;
-    animation-duration: 10s;
-    animation-delay: 4s;
-}
-
-@keyframes oportunidades{
-    0%{
-        color: rgb(80, 18, 52);
+.oportunidadesh1 {
+    background-color: rgb(119, 21, 75);
+    color: rgb(245, 243, 230);
+    font-size: 4rem;
+    font: normal Varela Round, sans-serif;
+    letter-spacing: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    animation: move linear 2000ms infinite;  
+  }
+  
+  @keyframes move {
+    0% {
+      text-shadow:
+        4px -4px 0 rgb(222, 159, 203), 
+        3px -3px 0 rgb(222, 159, 203), 
+        2px -2px 0 rgb(222, 159, 203), 
+        1px -1px 0 rgb(222, 159, 203),
+        -4px 4px 0 hsla(180, 100%, 50%, 1), 
+        -3px 3px 0 hsla(180, 100%, 50%, 1), 
+        -2px 2px 0 hsla(180, 100%, 50%, 1), 
+        -1px 1px 0 hsla(180, 100%, 50%, 1)
+      ;
     }
-    50%{
-        text-shadow: 7px 7px 7px rgb(255, 255, 255);
+    25% {    
+      text-shadow:      
+        -4px -4px 0 hsla(180, 100%, 50%, 1), 
+        -3px -3px 0 hsla(180, 100%, 50%, 1), 
+        -2px -2px 0 hsla(180, 100%, 50%, 1), 
+        -1px -1px 0 hsla(180, 100%, 50%, 1),
+        4px 4px 0 rgb(222, 159, 203), 
+        3px 3px 0 rgb(222, 159, 203), 
+        2px 2px 0 rgb(222, 159, 203), 
+        1px 1px 0 rgb(222, 159, 203),      
+      ;
     }
-    100%{
-        text-shadow: 7px 7px 7px rgb(255, 255, 255);
-        font-size: 5.3rem;
+    50% {
+      text-shadow:
+        -4px 4px 0 rgb(222, 159, 203), 
+        -3px 3px 0 rgb(222, 159, 203), 
+        -2px 2px 0 rgb(222, 159, 203), 
+        -1px 1px 0 rgb(222, 159, 203),
+        4px -4px 0 hsla(180, 100%, 50%, 1), 
+        3px -3px 0 hsla(180, 100%, 50%, 1), 
+        2px -2px 0 hsla(180, 100%, 50%, 1), 
+        1px -1px 0 hsla(180, 100%, 50%, 1)
+      ;
     }
-}
-
+    75% {
+      text-shadow:
+        4px 4px 0 hsla(180, 100%, 50%, 1), 
+        3px 3px 0 hsla(180, 100%, 50%, 1), 
+        2px 2px 0 hsla(180, 100%, 50%, 1), 
+        1px 1px 0 hsla(180, 100%, 50%, 1),
+        -4px -4px 0 rgb(222, 159, 203), 
+        -3px -3px 0 rgb(222, 159, 203), 
+        -2px -2px 0 rgb(222, 159, 203), 
+        -1px -1px 0 rgb(222, 159, 203),     
+      ;
+    }
+    100% {
+      text-shadow:
+        4px -4px 0 rgb(222, 159, 203), 
+        3px -3px 0 rgb(222, 159, 203), 
+        2px -2px 0 rgb(222, 159, 203), 
+        1px -1px 0 rgb(222, 159, 203),
+        -4px 4px 0 hsla(180, 100%, 50%, 1), 
+        -3px 3px 0 hsla(180, 100%, 50%, 1), 
+        -2px 2px 0 hsla(180, 100%, 50%, 1), 
+        -1px 1px 0 hsla(180, 100%, 50%, 1)
+      ;
+    }  
+  }
 
 /*productos*/
 
@@ -406,11 +527,15 @@ li a:hover{
 
 
 
-/*Galeria de la sección productos*/
+/*Galeria de la sección productos y oportunidades*/
 
 .thumbnail{
-    padding: 12px;
+    padding: 20px;
     text-align: center;
+}
+
+.thumbnail img{
+    border: 2px solid rgb(196, 67, 140);
 }
 
 .thumbnail a{
@@ -422,6 +547,22 @@ li a:hover{
     text-decoration: none;
     color: rgb(119, 21, 75);
 }
+
+.thumbnail .original{
+    background-color: rgb(196, 67, 140);
+    text-decoration: line-through;
+}
+
+.thumbnail h5{
+    font-size: 19px;
+    color: rgb(255, 255, 255);
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    background-color: rgb(119, 21, 75);
+    padding: 2px;
+    text-align: center;
+}
+
 
 .galeriaproductos{
     width: 100%;
@@ -610,8 +751,18 @@ li a:hover{
 
 /*responsive*/
 
-
+@media only screen and (min-width:200px){
+    .oportunidadesh1{
+        font-size: 1.2rem;
+    }
+}
 @media only screen and (min-width:400px){
+    .oportunidadesh1{
+        font-size: 1.5rem;
+    }
+    .oportunidadesparaaprovechar{
+        text-align: 2rem;
+    }
     .galeriadeoportunidades{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -643,6 +794,11 @@ li a:hover{
 
 
 @media only screen and (min-width:630px) and (max-width:749px){
+
+    .oportunidadesh1{
+        font-size: 2rem;
+    }
+   
     .galeriadeoportunidades{
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -704,6 +860,9 @@ li a:hover{
 }
 
 @media only screen and (min-width:750px){
+    .oportunidadesh1{
+        font-size: 2.3rem;
+    }
     .galeriadeoportunidades{
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
@@ -739,12 +898,18 @@ li a:hover{
 }
 
 @media only screen and (min-width:900px){
+    .oportunidadesh1{
+        font-size: 2.8rem;
+    }
 .nleft{
     height: 500px;
 }
 }
 
 @media only screen and (min-width:1000px){
+    .oportunidadesh1{
+        font-size: 3rem;
+    }
     .nosotros{
         flex-wrap: nowrap;
     }
