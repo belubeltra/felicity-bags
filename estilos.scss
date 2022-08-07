@@ -6,6 +6,11 @@ font-family: 'Raleway', sans-serif;
 font-family: 'Roboto Condensed', sans-serif;
 
 */
+@mixin sizes ($width, $height){
+    width: $width;
+    height: $height;
+}
+
 
 *{
     margin: 0;
@@ -25,21 +30,6 @@ font-family: 'Roboto Condensed', sans-serif;
 
 div{
     font-weight: bold;
-}
-
-h5{
-    font-size: 25px;
-    color: rgb(255, 255, 255);
-    font-family: 'Raleway', sans-serif;
-    font-weight: bold;
-    background-color: rgb(119, 21, 75);
-    padding: 20px;
-    text-align: center;
-}
-
-h6{
-    font-style: italic;
-    font-size: 1.5rem;
 }
 
 h1{
@@ -67,7 +57,6 @@ h2{
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
-
 
 
   @keyframes aparecer{
@@ -205,36 +194,55 @@ h4{
 
 /*index*/
 
-/*
-.barraindex{
-    background-color: rgb(241, 154, 203);
+.infobarra{
+    @extend .footer;
+
+    i{
+        color: rgb(245, 243, 230);
+        font-size: 1rem;
+        
+    }
+}
+
+$btns:(
+    btn1: rgb(222,47,184),
+    btn2: rgb(119,21,75),
+    btn3: rgb(222,47,184),
+    btn4: rgb(119,21,75),
+    btn5: rgb(222,47,184),
+    btn6: rgb(119,21,75),
+    btn7: rgb(222,47,184),
+    btn8: rgb(119,21,75),
+
+);
+
+.botonesproductos{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
 
     a{
-        font-size: 1.5rem;
-        padding: 10px;
-        margin: 5px;
-        display: flex;
-        justify-content: space-between;
+        list-style: none;
         text-decoration: none;
-        color: rgb(80, 18, 52);
-        display: inline-block;
-        align-items: center;
+    }
+}
+
+
+@each $btn1, $color in $btns {
+    .btn--#{$btn1}{
+        border: 2px solid rgb(119, 21, 75);
+        text-align: center;
+        background-color: rgb(250, 194, 226);
+        color: $color;
+        text-shadow: 0 0 4px rgb(245, 243, 230);
+        border-radius: 20px;
     }
     
-    i{
-        text-align: center;
-        width: 100%;
-        margin: 0 auto;
-        animation-duration: 2s;
-        animation-name: whatsapp;
-        animation-delay: 2s;
-        animation-direction: alternate;
-        animation-iteration-count: infinite;
-    }
-
-
 }
-*/
+
+
+/*Mapa*/
 
 .modaseccion{
     background-color: rgb(255, 189, 240);
@@ -324,8 +332,7 @@ h4{
 }
 
 .nleft{
-    width: 100%;
-    height: 450px;
+    @include sizes(100%, 450px);
     background-image: url(Imagenes/09.jpg);
     background-size: cover;
     background-position: center;
@@ -379,6 +386,8 @@ h4{
 
     h2{
         font-size: 3.5rem;
+        background-color: rgb(119, 21, 75);
+        color: rgb(250, 194, 226);
     }
 
     a{
@@ -545,8 +554,7 @@ li a:hover{
 }
 
 .galeriaproductos{
-    width: 100%;
-    height: auto;
+    @include sizes(100%, auto);
     background-color: rgb(245, 243, 230);
     padding: 20px;
     min-height: 100vh;
@@ -556,9 +564,7 @@ li a:hover{
     height: 200px;
     border: 2px solid rgb(255, 189, 240);
     margin: 10px;
-    box-shadow: 2px 2px 8px rgb(250, 194, 226);
-
-    
+    box-shadow: 2px 2px 8px rgb(250, 194, 226);    
 }
 
 .imagen:hover{
@@ -627,8 +633,7 @@ li a:hover{
 /*Galeria de la sección index y oportunidades*/
 
 .galeriadeoportunidades{
-    width: 100%;
-    height: auto;
+    @include sizes(100%, auto);
     background-color: rgb(241, 154, 203);
     padding: 20px;
 }
@@ -702,6 +707,8 @@ li a:hover{
 
 }
 
+
+
 /*Footer*/
 
 .footer{
@@ -720,7 +727,7 @@ li a:hover{
     }
 
     i{
-        font-size: 30px;
+        font-size: 25px;
         letter-spacing: 2px;
         margin-bottom: 20px;
         margin: 10px;
